@@ -68,4 +68,4 @@ set background=dark
 
 
 let g:python3_host_prog = 'D:\ajin_program_code\Python 3.8\python.exe' 	" 开启python3支持
-let g:python_host_prog = 'D:\ajin_program_code\Python 3.8\python.exe' 	" 开启python2支持
+let g:python_host_prog = 'D:\ajin_program_code\Python 2.7\python.exe' 	" 开启python2支持

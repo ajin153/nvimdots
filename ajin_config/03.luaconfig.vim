@@ -1,5 +1,5 @@
 """""""""""""""""""""""
-"""""lua插件配置 """"""
+""""" lua插件配置 """""
 """""""""""""""""""""""
 " ---update: 2022.01.17
 
@@ -10,29 +10,40 @@ lua<<EOF
 require('telescope').setup {
   extensions = {
     fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = true,  -- override the generic sorter
-      override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                       -- the default case_mode is "smart_case"
+        fuzzy = true,                    -- false will only do exact matching
+        override_generic_sorter = true,  -- override the generic sorter
+        override_file_sorter = true,     -- override the file sorter
+        case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                         -- the default case_mode is "smart_case"
     },
-    live_grep_raw = {
-      auto_quoting = true, -- enable/disable auto-quoting
+    live_grep_args = {
+        auto_quoting = true, -- enable/disable auto-quoting
+    },
+    fzf_writer = {
+        -- Disabled by default.
+        -- Will probably slow down some aspects of the sorter, but can make color highlights.
+        -- I will work on this more later.
+        use_highlighter = true,
     }
   }
 }
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
-require("telescope").load_extension("live_grep_raw")
+require("telescope").load_extension("live_grep_args")
 EOF
 
 " nvim-tree
 lua<<EOF
 require'nvim-tree'.setup {
-  view = {
-    width = 40
-  }
+    view = {
+        width = 40
+    },
+    icons = {
+        show = {
+            folder_arrow = false
+        }
+    }
 }
 EOF
 
@@ -69,19 +80,6 @@ EOF
 " gitsigns
 lua<<EOF
 require('gitsigns').setup()
-EOF
-
-" lsp
-lua<<EOF
-local lsp = require "lspconfig"
-local coq = require "coq"
-
-lsp.clangd.setup(coq.lsp_ensure_capabilities())
-lsp.pyright.setup(coq.lsp_ensure_capabilities())
-lsp.bashls.setup(coq.lsp_ensure_capabilities())
-lsp.sumneko_lua.setup(coq.lsp_ensure_capabilities())
-
-vim.cmd('COQnow -s')
 EOF
 
 " lualine

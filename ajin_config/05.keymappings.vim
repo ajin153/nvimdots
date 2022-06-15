@@ -16,8 +16,9 @@ vmap <C-v> c<ESC>" + p
 imap <C-v> <C-r><C-o>+
 
 " telescope
-nnoremap <C-f> <cmd>Telescope find_files<cr>
-nnoremap <C-b> <cmd>Telescope buffers<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <C-f> <cmd>Telescope grep_string<cr>
 nnoremap <C-S-f> <cmd>lua require("telescope").extensions.live_grep_raw.live_grep_raw()<cr>
 
 " bufferline
@@ -50,3 +51,7 @@ nmap k <Plug>(accelerated_jk_gk)
 
 " .h和.cpp切换
 nnoremap <C-u> :ClangdSwitchSourceHeader<CR>
+
+" asynctask
+noremap <silent><f5> :AsyncTask file-run<cr>
+noremap <silent><f9> :AsyncTask file-build<cr>

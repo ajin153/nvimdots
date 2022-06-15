@@ -93,3 +93,10 @@ let g:go_info_mode='gopls'
 let g:better_whitespace_guicolor='#b988b0'
 let g:better_whitespace_enabled=1
 
+" vim-markdown
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0 " 关闭code-block自动折叠
+let g:vim_markdown_folding_disabled = 1 " 关闭markdown自动折叠
+
+" asynctasks、asyncrun
+let g:asyncrun_open = 20

@@ -8,7 +8,7 @@
     Plug 'ryanoasis/vim-devicons'							                        " vim-devicons，留着显示airline的图标
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }		    " markdown三件套
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }         " markdown三件套
     Plug 'preservim/nerdcommenter'							                        " nerdcommenter，注释插件
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}			            " nvim-treesitter，代码语法高亮增强工具
     Plug 'ludovicchabant/vim-gutentags'
@@ -25,7 +25,6 @@
     " Plug 'simrat39/symbols-outline.nvim'						                    " symbols-outline(---2022.01.20，windows下vista.vim更好用，暂时禁用)
     Plug 'kyazdani42/nvim-tree.lua'							                        " nvim-tree，nerdtree替代品，更好看，更快
     Plug 'liuchengxu/vista.nvim' 							                  " 原名：liuchengxu/vista.vim，但是在windows下.vim文件夹无法识别，所以现在是把它下载下来后改成.nvim，同时文件夹名字也改了就能用了(被我用来专为perl服务的tagbar)
-
     Plug 'nvim-lualine/lualine.nvim'                                                " lualine，airline替代品
     Plug 'rhysd/accelerated-jk'                                                     " accelerated-jk，加速jk上下移动
     Plug 'SmiteshP/nvim-gps'                                                        " nvim-gps，可以标出当前光标所在的变量的层次tag关系
@@ -40,7 +39,9 @@
     Plug 'nvim-telescope/telescope.nvim'                                            " fzf原生的界面在windows 11上有问题，使用telescope.nvim替代 ---2022.5.22
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }               " telescope-fzf，支持telescope.nvim使用模糊查询 ---2022.5.22
     Plug 'nvim-telescope/telescope-rg.nvim'                                         " telescope-rg，支持live grep使用ripgrep
-    Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}                                       " coq_nvim，代码补全插件
-    Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}                            " coq_nvim
-    Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}                                  " coq_nvim
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}                                 " coc补全
+    Plug 'tpope/vim-fugitive'                                                       " fugitive，git命令工具，Git blame好用
+    Plug 'skywind3000/asynctasks.vim'                                               " skywind3000大佬，vim内编译运行插件
+    Plug 'skywind3000/asyncrun.vim'                                                 " skywind3000大佬，vim内编译运行插件
+
     call plug#end()
