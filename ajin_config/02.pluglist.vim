@@ -36,12 +36,10 @@
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }								" onenord主题
     Plug 'ntpeters/vim-better-whitespace'											" 显示多余空格(---2022.1.20，onenord主题不支持不用插件的方法)
     Plug 'nvim-lua/plenary.nvim'                                                    " telescope前置需要插件
-    Plug 'nvim-telescope/telescope.nvim'                                            " fzf原生的界面在windows 11上有问题，使用telescope.nvim替代 ---2022.5.22
-    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }               " telescope-fzf，支持telescope.nvim使用模糊查询 ---2022.5.22
-    Plug 'nvim-telescope/telescope-rg.nvim'                                         " telescope-rg，支持live grep使用ripgrep
     Plug 'neoclide/coc.nvim', {'branch': 'release'}                                 " coc补全
     Plug 'tpope/vim-fugitive'                                                       " fugitive，git命令工具，Git blame好用
     Plug 'skywind3000/asynctasks.vim'                                               " skywind3000大佬，vim内编译运行插件
     Plug 'skywind3000/asyncrun.vim'                                                 " skywind3000大佬，vim内编译运行插件
 
+    Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
     call plug#end()

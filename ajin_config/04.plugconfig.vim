@@ -76,7 +76,7 @@ let g:nvim_tree_icons = {
 " vista
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_default_executive = 'ctags'
-let g:vista_fzf_preview = ['right:50%']
+let g:vista_sidebar_width = 40
 let g:vista#renderer#icons = {
 \   "function": "\uf794",
 \   "variable": "",
@@ -100,3 +100,8 @@ let g:vim_markdown_folding_disabled = 1 " 关闭markdown自动折叠
 
 " asynctasks、asyncrun
 let g:asyncrun_open = 20
+let g:asynctasks_term_pos = 'external'
+
+" Leaderf
+let g:Lf_fuzzyEngine_C=1
+let g:Lf_MaxCount=100000

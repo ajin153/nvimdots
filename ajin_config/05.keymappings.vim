@@ -15,12 +15,6 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>" + p
 imap <C-v> <C-r><C-o>+
 
-" telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <C-f> <cmd>Telescope grep_string<cr>
-nnoremap <C-S-f> <cmd>lua require("telescope").extensions.live_grep_raw.live_grep_raw()<cr>
-
 " bufferline
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
 nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
@@ -38,7 +32,7 @@ nnoremap <C-g> :DiffviewOpen<cr>
 nnoremap <C-h> :DiffviewClose<cr>
 
 " vista
-nnoremap <F2> :Vista!!<CR>
+nnoremap <F7> :Vista!!<CR>
 
 " nvim-tree
 nnoremap <C-p> :NvimTreeToggle<CR>
@@ -49,9 +43,17 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-" .h和.cpp切换
-nnoremap <C-u> :ClangdSwitchSourceHeader<CR>
+" coc
+nnoremap <C-u> :CocCommand clangd.switchSourceHeader<CR>
+nnoremap <leader>gd :call CocActionAsync('jumpDefinition')<CR>
 
 " asynctask
-noremap <silent><f5> :AsyncTask file-run<cr>
-noremap <silent><f9> :AsyncTask file-build<cr>
+noremap <silent><F1> :AsyncTask file-build<cr>
+noremap <silent><F2> :AsyncTask file-run<cr>
+
+" Leaderf
+" 查找文件: \f
+" 查看缓存文件: \b
+" Leaderf内部上下移动 <C-j>,<C-k>
+" 别删下面这条的空格，它是我的键位映射
+noremap <C-S-f> :Leaderf rg --match-path 
