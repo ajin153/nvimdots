@@ -104,4 +104,4 @@ let g:asynctasks_term_pos = 'external'
 
 " Leaderf
 let g:Lf_fuzzyEngine_C=1
-let g:Lf_MaxCount=100000
+let g:Lf_WindowHeight=0.25

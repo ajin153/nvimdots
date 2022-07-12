@@ -51,9 +51,13 @@ nnoremap <leader>gd :call CocActionAsync('jumpDefinition')<CR>
 noremap <silent><F1> :AsyncTask file-build<cr>
 noremap <silent><F2> :AsyncTask file-run<cr>
 
-" Leaderf
+" Leaderf，telescope
 " 查找文件: \f
+nnoremap <leader>f <cmd>Telescope find_files<cr>
 " 查看缓存文件: \b
-" Leaderf内部上下移动 <C-j>,<C-k>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
+" Leaderf内部下<C-j>,上<C-k>
 " 别删下面这条的空格，它是我的键位映射
 noremap <C-S-f> :Leaderf rg --match-path 
+
+" 根据ctags结果补全：插入模式下的<C-x><C-]>

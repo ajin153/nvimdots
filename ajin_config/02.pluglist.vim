@@ -40,6 +40,7 @@
     Plug 'tpope/vim-fugitive'                                                       " fugitive，git命令工具，Git blame好用
     Plug 'skywind3000/asynctasks.vim'                                               " skywind3000大佬，vim内编译运行插件
     Plug 'skywind3000/asyncrun.vim'                                                 " skywind3000大佬，vim内编译运行插件
-
-    Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+    Plug 'nvim-telescope/telescope.nvim'                                            " telescope，支持文件查询，LeaderF文件多了会卡死
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }               " telescope-fzf，支持文件查询，LeaderF文件多了会卡死
+    Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }                  " LeaderF，支持模糊查询字段
     call plug#end()
