@@ -43,4 +43,5 @@
     Plug 'nvim-telescope/telescope.nvim'                                            " telescope，支持文件查询，LeaderF文件多了会卡死
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }               " telescope-fzf，支持文件查询，LeaderF文件多了会卡死
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }                  " LeaderF，支持模糊查询字段
+    Plug 'Vimjas/vim-python-pep8-indent'                                            " vim-python-pep8-indent，python缩进(使用后有类似pycharm的效果，但换行前的'/'要自己加) ---2022.7.13
     call plug#end()

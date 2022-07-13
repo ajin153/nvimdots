@@ -60,4 +60,6 @@ nnoremap <leader>b <cmd>Telescope buffers<cr>
 " 别删下面这条的空格，它是我的键位映射
 noremap <C-S-f> :Leaderf rg --match-path 
 
-" 根据ctags结果补全：插入模式下的<C-x><C-]>
+" 根据ctags结果补全：默认是插入模式下的<C-x><C-]>，修改成<C-Space>(需解决微软拼音快捷键冲突问题)
+imap <C-Space> <C-x><C-]>
+

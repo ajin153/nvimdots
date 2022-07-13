@@ -105,3 +105,8 @@ let g:asynctasks_term_pos = 'external'
 " Leaderf
 let g:Lf_fuzzyEngine_C=1
 let g:Lf_WindowHeight=0.25
+let g:Lf_WildIgnore = {
+        \ 'dir': ['.svn','.git','.hg'],
+        \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+    \}
+
