@@ -21,8 +21,7 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--perl-kinds=+dMh']
 let g:gutentags_ctags_extra_args += ['--python-kinds=+zl']
 let g:gutentags_ctags_extra_args += ['--go-kinds=+R']
-let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']			" 如果使用 universal ctags 需要增加下面一行，老的 Exuberant-ctags 不能加下一行
-let g:gutentags_auto_add_gtags_cscope = 0					" 禁用 gutentags 自动加载 gtags 数据库的行为
+let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
 
 " nvim-tree
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
@@ -110,3 +109,4 @@ let g:Lf_WildIgnore = {
         \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
     \}
 
+let g:gutentags_define_advanced_commands = 1

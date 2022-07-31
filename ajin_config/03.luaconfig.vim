@@ -5,16 +5,21 @@
 
 " nvim-tree
 lua<<EOF
-require'nvim-tree'.setup {
-    view = {
-        width = 40
+require("nvim-tree").setup({
+  view = {
+    adaptive_size = true,
+  },
+  renderer = {
+    indent_markers = {
+        enable = true
     },
     icons = {
         show = {
             folder_arrow = false
         }
     }
-}
+  }
+})
 EOF
 
 " bufferline
@@ -144,13 +149,11 @@ ins_left({
       n = colors.red,
       i = colors.green,
       v = colors.blue,
-      [''] = colors.blue,
       V = colors.blue,
       c = colors.magenta,
       no = colors.red,
       s = colors.orange,
       S = colors.orange,
-      [''] = colors.orange,
       ic = colors.yellow,
       R = colors.violet,
       Rv = colors.violet,
@@ -293,4 +296,9 @@ require('telescope').setup {
   }
 }
 require('telescope').load_extension('fzf')
+EOF
+
+" zen-mode
+lua << EOF
+  require("zen-mode").setup {}
 EOF

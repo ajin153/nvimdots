@@ -1,42 +1,29 @@
-1.在~/AppData/Local/nvim/下创建autoload文件夹，用于存放插件
+默认配置位置(ajin_config/ 和 sysinit.vim)：/usr/share/nvim
+
+插件存放位置(plug.vim 和 其他插件): ~/.local/share/nvim/site/autoload
+
+1.在~/.local/share/nvim/下创建/site/autoload文件夹，用于存放插件
 
 2.将plug.vim放入autoload文件夹(vim-plug是一个插件管理工具)
 
 3.使用PlugInstall命令安装插件
  |- 3.1. 提前搭好梯子和git的代理
-  |- git config --global https.proxy http://127.0.0.1:7890
-  |- git config --global http.proxy http://127.0.0.1:7890
+  |- git config --global https.proxy http://wsl的ip:7890
+  |- git config --global http.proxy http://wsl的ip:7890
 
 4.安装consolas NF字体(github上下的，为了满足nvim-tree的图标需求)
   |- my-nerd-fonts-master.zip
 
 5.安装语言依赖(Lua,Python 2,Python 3)
-  |- 注意安装目录和环境变量设置
-  |- Lua 5.1: LuaForWindows_v5.1.5-52.exe
-  |- Python 2.7: python-2.7.16.amd64.msi
-  |- Python 3.8: python-3.8.10-amd64.exe
+  |- apt-get python2 python3 lua5.4
 
-6.安装Chocolatey(Windows下好用的包管理工具)
-  |- 用管理员用户开powershell安装以下工具:
-    |- fzf: choco install fzf
-    |- ripgrep: choco install ripgrep
-    |- mingw: choco install mingw
-    |- make: choco install make
-    |- bat: choco install bat
+6.安装插件依赖的工具
+  |- fzf: apt-get install fzf
+  |- ripgrep: apt-get install ripgrep
+  |- ctags: apt-get install universal-ctags
+  |- nodejs: 不能用默认的，ubuntu-22.04默认的nodejs版本比较旧
 
-7.安装ctags(github下载windows编译版)
-  |- universal-ctags/ctags-win32: ctags-p5.9.20220522.0-x64.zip
-
-8.安装coq_nvim
-  |- 关掉梯子，COQdeps用梯子会出现装不上的情况
-
-9.安装nodejs
-  |- Nodejs 16: node-v16.15.0-x64.msi
-
-10.安装lsp(可以考虑用nvim-lsp-installer)
-  |- C++: clangd
+7.安装lsp
+  |- C and C++: clangd
   |- Python: pyright
-  |- Go: gopls
   |- Shell: bashls
-  |- Lua: sumneko_lua
-

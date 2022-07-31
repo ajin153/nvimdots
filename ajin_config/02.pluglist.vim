@@ -3,7 +3,7 @@
     """""""""""""""""""""""
     " ---update: 2022.01.19
 
-    call plug#begin('~/AppData/Local/nvim/autoload') 			                    " 注意: windows 和 linux 这里请做好区分! (公司内外网都有点区别...)
+    call plug#begin('~/.local/share/nvim/site/autoload/') 			                    " 注意: windows 和 linux 这里请做好区分! (公司内外网都有点区别...)
 
     Plug 'ryanoasis/vim-devicons'							                        " vim-devicons，留着显示airline的图标
     Plug 'godlygeek/tabular'
@@ -24,7 +24,7 @@
     Plug 'itchyny/vim-cursorword'							                        " vim-cursorword，为同一单词提供下划线显示
     " Plug 'simrat39/symbols-outline.nvim'						                    " symbols-outline(---2022.01.20，windows下vista.vim更好用，暂时禁用)
     Plug 'kyazdani42/nvim-tree.lua'							                        " nvim-tree，nerdtree替代品，更好看，更快
-    Plug 'liuchengxu/vista.nvim' 							                  " 原名：liuchengxu/vista.vim，但是在windows下.vim文件夹无法识别，所以现在是把它下载下来后改成.nvim，同时文件夹名字也改了就能用了(被我用来专为perl服务的tagbar)
+    Plug 'liuchengxu/vista.vim' 							                        " vista.vim，tag列表工具
     Plug 'nvim-lualine/lualine.nvim'                                                " lualine，airline替代品
     Plug 'rhysd/accelerated-jk'                                                     " accelerated-jk，加速jk上下移动
     Plug 'SmiteshP/nvim-gps'                                                        " nvim-gps，可以标出当前光标所在的变量的层次tag关系
@@ -44,4 +44,7 @@
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }               " telescope-fzf，支持文件查询，LeaderF文件多了会卡死
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }                  " LeaderF，支持模糊查询字段
     Plug 'Vimjas/vim-python-pep8-indent'                                            " vim-python-pep8-indent，python缩进(使用后有类似pycharm的效果，但换行前的'/'要自己加) ---2022.7.13
+    Plug 'vim-scripts/BufOnly.vim'                                                  " BufOnly，可以用于关闭除当前页的其他页。---2022.7.16
+    Plug 'folke/zen-mode.nvim'                                                      " zen-mode，引入禅模式
+
     call plug#end()
