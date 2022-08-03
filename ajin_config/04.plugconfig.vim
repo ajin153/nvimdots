@@ -98,8 +98,8 @@ let g:vim_markdown_conceal_code_blocks = 0 " 关闭code-block自动折叠
 let g:vim_markdown_folding_disabled = 1 " 关闭markdown自动折叠
 
 " asynctasks、asyncrun
-let g:asyncrun_open = 20
-let g:asynctasks_term_pos = 'external'
+let g:asyncrun_open = 15
+let g:asynctasks_term_pos = 'bottom'
 
 " Leaderf
 let g:Lf_fuzzyEngine_C=1

@@ -24,7 +24,7 @@
     Plug 'itchyny/vim-cursorword'							                        " vim-cursorword，为同一单词提供下划线显示
     " Plug 'simrat39/symbols-outline.nvim'						                    " symbols-outline(---2022.01.20，windows下vista.vim更好用，暂时禁用)
     Plug 'kyazdani42/nvim-tree.lua'							                        " nvim-tree，nerdtree替代品，更好看，更快
-    Plug 'liuchengxu/vista.vim' 							                        " vista.vim，tag列表工具
+    Plug 'liuchengxu/vista.vim' 							                  " 原名：liuchengxu/vista.vim，但是在windows下.vim文件夹无法识别，所以现在是把它下载下来后改成.nvim，同时文件夹名字也改了就能用了(被我用来专为perl服务的tagbar)
     Plug 'nvim-lualine/lualine.nvim'                                                " lualine，airline替代品
     Plug 'rhysd/accelerated-jk'                                                     " accelerated-jk，加速jk上下移动
     Plug 'SmiteshP/nvim-gps'                                                        " nvim-gps，可以标出当前光标所在的变量的层次tag关系

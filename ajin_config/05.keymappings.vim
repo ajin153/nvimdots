@@ -75,3 +75,6 @@ cnoremap <C-V> <C-R>+
 
 " zen-mode
 nnoremap <leader>z :ZenMode<cr>
+
+" coc.nvim
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
