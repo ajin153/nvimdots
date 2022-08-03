@@ -27,6 +27,9 @@ nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
 nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 nmap <leader>q :bp<cr>:bd #<cr>
 
+" BufOnly
+nmap <leader>qa :BufOnly<cr>
+
 " diffview
 nnoremap <C-g> :DiffviewOpen<cr>
 nnoremap <C-h> :DiffviewClose<cr>
@@ -45,7 +48,7 @@ nmap k <Plug>(accelerated_jk_gk)
 
 " coc
 nnoremap <C-u> :CocCommand clangd.switchSourceHeader<CR>
-nnoremap <leader>gd :call CocActionAsync('jumpDefinition')<CR>
+nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
 
 " asynctask
 noremap <silent><F1> :AsyncTask file-build<cr>
@@ -58,8 +61,20 @@ nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 " Leaderf内部下<C-j>,上<C-k>
 " 别删下面这条的空格，它是我的键位映射
-noremap <C-S-f> :Leaderf rg --match-path 
+noremap <C-f> :Leaderf rg --match-path 
 
 " 根据ctags结果补全：默认是插入模式下的<C-x><C-]>，修改成<C-Space>(需解决微软拼音快捷键冲突问题)
 imap <C-Space> <C-x><C-]>
 
+" 映射普通模式下使用':'直接进入命令行模式
+nnoremap ; :
+xnoremap ; :
+
+" 在命令行粘贴的快捷键
+cnoremap <C-V> <C-R>+
+
+" zen-mode
+nnoremap <leader>z :ZenMode<cr>
+
+" coc.nvim
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

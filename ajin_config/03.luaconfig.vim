@@ -5,16 +5,21 @@
 
 " nvim-tree
 lua<<EOF
-require'nvim-tree'.setup {
-    view = {
-        width = 40
+require("nvim-tree").setup({
+  view = {
+    adaptive_size = true,
+  },
+  renderer = {
+    indent_markers = {
+        enable = true
     },
     icons = {
         show = {
             folder_arrow = false
         }
     }
-}
+  }
+})
 EOF
 
 " bufferline
@@ -293,4 +298,9 @@ require('telescope').setup {
   }
 }
 require('telescope').load_extension('fzf')
+EOF
+
+" zen-mode
+lua << EOF
+  require("zen-mode").setup {}
 EOF
