@@ -8,12 +8,15 @@
 " 加载init.vim快捷键
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-""" 设置剪切复制粘贴
+" 设置剪切复制粘贴
 set mouse=a
 vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>" + p
 imap <C-v> <C-r><C-o>+
+
+" 设置全选
+nmap <C-a> ggVG
 
 " bufferline
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
