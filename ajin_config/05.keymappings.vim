@@ -43,7 +43,7 @@ nnoremap <F7> :Vista!!<CR>
 " nvim-tree
 nnoremap <C-p> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+nnoremap <leader>n :NvimTreeFindFileToggle<CR>
 
 " accelerated-jk
 nmap j <Plug>(accelerated_jk_gj)
