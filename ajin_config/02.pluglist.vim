@@ -46,5 +46,6 @@
     Plug 'Vimjas/vim-python-pep8-indent'                                            " vim-python-pep8-indent，python缩进(使用后有类似pycharm的效果，但换行前的'/'要自己加) ---2022.7.13
     Plug 'vim-scripts/BufOnly.vim'                                                  " BufOnly，可以用于关闭除当前页的其他页。---2022.7.16
     Plug 'folke/zen-mode.nvim'                                                      " zen-mode，引入禅模式
+    Plug 'michaelb/sniprun', {'do': 'bash install.sh'}                              " sniprun，支持运行片段代码
 
     call plug#end()

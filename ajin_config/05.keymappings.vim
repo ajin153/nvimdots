@@ -8,14 +8,14 @@
 " 加载init.vim快捷键
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" 设置剪切复制粘贴
+""" 设置剪切复制粘贴
 set mouse=a
 vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>" + p
 imap <C-v> <C-r><C-o>+
 
-" 设置全选
+" 设置全选<C-a>
 nmap <C-a> ggVG
 
 " bufferline
@@ -81,3 +81,7 @@ nnoremap <leader>z :ZenMode<cr>
 
 " coc.nvim
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" sniprun
+vmap <F3> :'<,'>SnipRun <cr>
+nmap <F4> :SnipClose <cr>
