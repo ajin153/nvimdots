@@ -110,3 +110,30 @@ let g:Lf_WildIgnore = {
     \}
 
 let g:gutentags_define_advanced_commands = 1
+
+" vim-easy-align
+" 配置一些自定义符号
+let g:easy_align_delimiters = {
+\ '>': { 'pattern': '>>\|=>\|>'  },
+\ '/': {
+\     'pattern':         '//\+\|/\*\|\*/',
+\     'delimiter_align': 'l',
+\     'ignore_groups':   ['!Comment'] },
+\ ']': {
+\     'pattern':       '[[\]]',
+\     'left_margin':   0,
+\     'right_margin':  0,
+\     'stick_to_left': 0
+\   },
+\ ')': {
+\     'pattern':       '[()]',
+\     'left_margin':   0,
+\     'right_margin':  0,
+\     'stick_to_left': 0
+\   },
+\ 'd': {
+\     'pattern':      ' \(\S\+\s*[;=]\)\@=',
+\     'left_margin':  0,
+\     'right_margin': 0
+\   }
+\ }

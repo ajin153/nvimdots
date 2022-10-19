@@ -6,6 +6,7 @@
 " <leader> => \
 
 " 加载init.vim快捷键
+let $MYVIMRC = '/usr/share/nvim/sysinit.vim'
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 """ 设置剪切复制粘贴
@@ -85,3 +86,6 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " sniprun
 vmap <F3> :'<,'>SnipRun <cr>
 nmap <F4> :SnipClose <cr>
+
+" vim-easy-align
+xmap ga <Plug>(EasyAlign)

@@ -3,7 +3,7 @@
     """""""""""""""""""""""
     " ---update: 2022.01.19
 
-    call plug#begin('~/.local/share/nvim/site/autoload/') 			                    " 注意: windows 和 linux 这里请做好区分! (公司内外网都有点区别...)
+    call plug#begin('/usr/share/nvim/runtime/autoload/') 			                    " 注意: windows 和 linux 这里请做好区分! (公司内外网都有点区别...)
 
     Plug 'ryanoasis/vim-devicons'							                        " vim-devicons，留着显示airline的图标
     Plug 'godlygeek/tabular'
@@ -47,5 +47,6 @@
     Plug 'vim-scripts/BufOnly.vim'                                                  " BufOnly，可以用于关闭除当前页的其他页。---2022.7.16
     Plug 'folke/zen-mode.nvim'                                                      " zen-mode，引入禅模式
     Plug 'michaelb/sniprun', {'do': 'bash install.sh'}                              " sniprun，支持运行片段代码
+    Plug 'junegunn/vim-easy-align'                                                  " vim-easy-align，格式化对齐插件
 
     call plug#end()
