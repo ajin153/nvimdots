@@ -135,5 +135,8 @@ let g:easy_align_delimiters = {
 \     'pattern':      ' \(\S\+\s*[;=]\)\@=',
 \     'left_margin':  0,
 \     'right_margin': 0
+\   },
+\ '\': {
+\     'pattern': '\\$',
 \   }
 \ }
