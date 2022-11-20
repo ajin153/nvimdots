@@ -98,8 +98,8 @@ let g:vim_markdown_conceal_code_blocks = 0 " 关闭code-block自动折叠
 let g:vim_markdown_folding_disabled = 1 " 关闭markdown自动折叠
 
 " asynctasks、asyncrun
-let g:asyncrun_open = 20
-let g:asynctasks_term_pos = 'external'
+let g:asyncrun_open = 15
+let g:asynctasks_term_pos = 'bottom'
 
 " Leaderf
 let g:Lf_fuzzyEngine_C=1
@@ -110,3 +110,33 @@ let g:Lf_WildIgnore = {
     \}
 
 let g:gutentags_define_advanced_commands = 1
+
+" vim-easy-align
+" 配置一些自定义符号
+let g:easy_align_delimiters = {
+\ '>': { 'pattern': '>>\|=>\|>'  },
+\ '/': {
+\     'pattern':         '//\+\|/\*\|\*/',
+\     'delimiter_align': 'l',
+\     'ignore_groups':   ['!Comment'] },
+\ ']': {
+\     'pattern':       '[[\]]',
+\     'left_margin':   0,
+\     'right_margin':  0,
+\     'stick_to_left': 0
+\   },
+\ ')': {
+\     'pattern':       '[()]',
+\     'left_margin':   0,
+\     'right_margin':  0,
+\     'stick_to_left': 0
+\   },
+\ 'd': {
+\     'pattern':      ' \(\S\+\s*[;=]\)\@=',
+\     'left_margin':  0,
+\     'right_margin': 0
+\   },
+\ '\': {
+\     'pattern': '\\$',
+\   }
+\ }

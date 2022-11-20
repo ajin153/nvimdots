@@ -66,5 +66,7 @@ set colorcolumn=80 " 设置80个字符提示竖线
 " colorscheme onenord            " 设置主题(---2022.1.20, onenord是lua形式的,无法使用colorscheme加载)
 set background=dark
 
-let g:python3_host_prog = 'D:\ajin_program_code\Python 3.8\python.exe' 	" 开启python3支持
-let g:python_host_prog = 'D:\ajin_program_code\Python 2.7\python.exe' 	" 开启python2支持
+highlight CursorWord gui=underline guisp=foreground
+
+let g:python3_host_prog = 'C:\Program Files\Python311\python.exe' 	" 开启python3支持
+let g:python_host_prog = 'C:\Python27\python.exe' 	" 开启python2支持

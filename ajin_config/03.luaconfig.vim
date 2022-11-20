@@ -27,7 +27,9 @@ lua<<EOF
 require('bufferline').setup {
   options = {
     numbers = "ordinal",
-    indicator_icon = '▎',
+    indicator = {
+        icon = '▎',
+    },
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
@@ -149,13 +151,11 @@ ins_left({
       n = colors.red,
       i = colors.green,
       v = colors.blue,
-      [''] = colors.blue,
       V = colors.blue,
       c = colors.magenta,
       no = colors.red,
       s = colors.orange,
       S = colors.orange,
-      [''] = colors.orange,
       ic = colors.yellow,
       R = colors.violet,
       Rv = colors.violet,

@@ -6,16 +6,17 @@
 " <leader> => \
 
 " 加载init.vim快捷键
+let $MYVIMRC = '~/AppData/Local/nvim/init.vim'
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" 设置剪切复制粘贴
+""" 设置剪切复制粘贴
 set mouse=a
 vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>" + p
 imap <C-v> <C-r><C-o>+
 
-" 设置全选
+" 设置全选<C-a>
 nmap <C-a> ggVG
 
 " bufferline
@@ -43,7 +44,7 @@ nnoremap <F7> :Vista!!<CR>
 " nvim-tree
 nnoremap <C-p> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+nnoremap <leader>n :NvimTreeFindFileToggle<CR>
 
 " accelerated-jk
 nmap j <Plug>(accelerated_jk_gj)
@@ -81,3 +82,10 @@ nnoremap <leader>z :ZenMode<cr>
 
 " coc.nvim
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" sniprun
+vmap <F3> :'<,'>SnipRun <cr>
+nmap <F4> :SnipClose <cr>
+
+" vim-easy-align
+xmap ga <Plug>(EasyAlign)
