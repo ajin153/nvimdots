@@ -1,9 +1,9 @@
     """""""""""""""""""""""
     """"""" 插件列表 """"""
     """""""""""""""""""""""
-    " ---update: 2022.11.20
+    " ---update: 2022.01.19
 
-    call plug#begin('~/AppData/Local/nvim/autoload') 			                    " 注意: windows 和 linux 这里请做好区分! (公司内外网都有点区别...)
+    call plug#begin('/usr/share/nvim/runtime/autoload/') 			                    " 注意: windows 和 linux 这里请做好区分! (公司内外网都有点区别...)
 
     Plug 'ryanoasis/vim-devicons'							                        " vim-devicons，留着显示airline的图标
     Plug 'godlygeek/tabular'
@@ -48,5 +48,8 @@
     Plug 'folke/zen-mode.nvim'                                                      " zen-mode，引入禅模式
     Plug 'michaelb/sniprun', {'do': 'bash install.sh'}                              " sniprun，支持运行片段代码
     Plug 'junegunn/vim-easy-align'                                                  " vim-easy-align，格式化对齐插件
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }                                  " catppuccin, 一种颜色主题
+    Plug 'sainnhe/everforest'                                                       " everforest, 一种颜色主题
+    Plug 'ggandor/leap.nvim'                                                        " leap，一种高效的跳转工具，支持给搜索字段打标签，根据标签实现跳转
 
     call plug#end()
