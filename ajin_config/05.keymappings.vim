@@ -6,7 +6,7 @@
 " <leader> => \
 
 " 加载init.vim快捷键
-let $MYVIMRC = '~/AppData/Local/nvim/init.vim'
+let $MYVIMRC = '/usr/share/nvim/sysinit.vim'
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 """ 设置剪切复制粘贴

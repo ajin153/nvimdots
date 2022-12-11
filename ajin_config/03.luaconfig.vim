@@ -22,6 +22,16 @@ require("nvim-tree").setup({
 })
 EOF
 
+" nvim-treesitter
+lua<<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
 " bufferline
 lua<<EOF
 require('bufferline').setup {
@@ -76,8 +86,8 @@ EOF
 " colorscheme
 lua<<EOF
 -- require('onenord').setup()
--- require('catppuccin').setup()
-vim.cmd('colorscheme everforest')
+vim.cmd.colorscheme "catppuccin"
+-- vim.cmd.colorscheme "everforest"
 EOF
 
 " telescope

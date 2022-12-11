@@ -51,5 +51,6 @@
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }                                  " catppuccin, 一种颜色主题
     Plug 'sainnhe/everforest'                                                       " everforest, 一种颜色主题
     Plug 'ggandor/leap.nvim'                                                        " leap，一种高效的跳转工具，支持给搜索字段打标签，根据标签实现跳转
+    Plug 'sbdchd/neoformat'                                                         " neoformat，代码格式化插件
 
     call plug#end()

@@ -140,3 +140,6 @@ let g:easy_align_delimiters = {
 \     'pattern': '\\$',
 \   }
 \ }
+
+" neoformat
+let g:neoformat_basic_format_retab = 1
