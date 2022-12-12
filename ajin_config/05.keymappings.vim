@@ -50,10 +50,6 @@ nnoremap <leader>n :NvimTreeFindFileToggle<CR>
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-" coc
-nnoremap <C-u> :CocCommand clangd.switchSourceHeader<CR>
-nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
-
 " asynctask
 noremap <silent><F1> :AsyncTask file-build<cr>
 noremap <silent><F2> :AsyncTask file-run<cr>
@@ -82,6 +78,19 @@ nnoremap <leader>z :ZenMode<cr>
 
 " coc.nvim
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+nnoremap <C-u> :CocCommand clangd.switchSourceHeader<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> <C-k> :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('<C-k>', 'in')
+  endif
+endfunction
 
 " sniprun
 vmap <F3> :'<,'>SnipRun <cr>
