@@ -6,6 +6,7 @@
 " indentLine
 let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
 let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+let g:indentLine_conceallevel = 0              " 制止隐藏.json文件的""
 
 " ctags
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']   	" gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名

@@ -18,6 +18,9 @@ require("nvim-tree").setup({
             folder_arrow = false
         }
     }
+  },
+  git = {
+    ignore = false
   }
 })
 EOF

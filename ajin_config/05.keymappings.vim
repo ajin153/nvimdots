@@ -98,3 +98,6 @@ nmap <F4> :SnipClose <cr>
 
 " vim-easy-align
 xmap ga <Plug>(EasyAlign)
+
+" lazygit
+nnoremap <silent> <leader>gg :LazyGit<CR>
