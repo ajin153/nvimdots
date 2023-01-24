@@ -144,3 +144,7 @@ let g:easy_align_delimiters = {
 
 " neoformat
 let g:neoformat_basic_format_retab = 1
+
+" vim-material
+let g:material_style='palenight'
+set background=dark
