@@ -69,5 +69,6 @@ set background=dark
 let g:python3_host_prog = '/usr/bin/python3' 	" 开启python3支持
 let g:python_host_prog = '/usr/bin/python2' 	" 开启python2支持
 
-" linux专属
+" linux专属(支持 ctrl-v 粘贴外部复制数据)
+" 使用前先安装xclip （sudo pacman -S xclip）
 set clipboard=unnamed
